@@ -79,18 +79,43 @@ def buscar_mayor(a,b,c)
         else
             2do=b
             3ro=a
-    return(1ero,2do,3ro)
-    
+    return (1ero,2do,3ro)
+
 print("ingrese tres números para ser ordenados de mayor a menor")
 num1=input(int("primer número: "))
 num2=input(int("segundo número: "))
 num3=input(int("tercer número: "))
 
 print("ordenados quedan:")
-buscar_mayor(num1,num2,num3)
+buscar_mayor(num1,num2,num3):
 
 #5
+def es_par(num)
+    if num%2 = 0
+        paridad= true
+    else 
+        paridad= false
+    return (paridad)
+    
+num = input("ingrese un número para determinar su paridad: ")
+es_par(num)
+if paridad is true
+    print("es par")
+else 
+    print("no es par")
+    
+#6
 
-def es_par
+def convertir_minutos(mins):
+    horas= int(mins//60)
+    sobrante= int(mins%60)
+    return (horas,sobrante)
+    
+
+#7
+
+def
+    
+    
 
         
