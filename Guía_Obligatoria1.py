@@ -114,7 +114,23 @@ def convertir_minutos(mins):
 
 #7
 
-def
+def verificar_acceso(edad)
+    if edad >= 18
+        pasa=true
+        
+    else 
+        pasa=false
+    return pasa
+    
+edad=input(int("ingrese su edad: "))
+verificar acceso(edad)
+if pasa=true
+    print("Acceso concedido")
+else
+    print("Acceso denegado")
+    
+#8
+def calcular edad(AnioNac)
     
     
 
