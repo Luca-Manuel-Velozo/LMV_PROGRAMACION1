@@ -21,7 +21,9 @@ devuelva la edad actual (sin considerar el mes de nacimiento). Luego, el program
 año de nacimiento del usuario y mostrar la edad calculada.
 
 '''
-#1
+'''#1 1. Escribir una función llamada saludar(nombre) que reciba un nombre como parámetro e imprima
+un saludo. Luego, el programa debe pedir el nombre del usuario y llamar a la función.'''
+
 def saludar(nombre)
     saludo = "hola, ",nombre ", cómo estás?"
     return print(saludo)
