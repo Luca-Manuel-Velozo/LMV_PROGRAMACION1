@@ -130,7 +130,12 @@ else
     print("Acceso denegado")
     
 #8
-def calcular edad(AnioNac)
+def calcular_edad(anio_nacimiento)
+    edad=int(2025-anio_nacimiento)
+    return edad
+anio_nacimiento=input(int("ingrese el año de nacimiento para calcular la edad: "))
+calcular_edad(anio_nacimiento)
+print("la edad es", edad)
     
     
 
