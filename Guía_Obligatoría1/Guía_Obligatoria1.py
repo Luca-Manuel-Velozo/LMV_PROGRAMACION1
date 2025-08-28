@@ -18,9 +18,10 @@ es mayor de edad (18 años o más) devolviendo un booleano. Luego, el programa d
 edad al usuario y mostrar un mensaje apropiado.
 8. Crear una función llamada calcular_edad(anio_nacimiento) que reciba el año de nacimiento y
 devuelva la edad actual (sin considerar el mes de nacimiento). Luego, el programa debe pedir el
-año de nacimiento del usuario y mostrar la edad calculada.
+año de nacimiento del usuario y mostrar la edad calculada.'''
 
-'''
+
+
 '''#1 1. Escribir una función llamada saludar(nombre) que reciba un nombre como parámetro e imprima
 un saludo. Luego, el programa debe pedir el nombre del usuario y llamar a la función.'''
 
