@@ -89,4 +89,8 @@ num3=input(int("tercer número: "))
 print("ordenados quedan:")
 buscar_mayor(num1,num2,num3)
 
+#5
+
+def es_par
+
         
