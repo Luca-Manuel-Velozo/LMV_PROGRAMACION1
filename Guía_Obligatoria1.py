@@ -23,4 +23,21 @@ año de nacimiento del usuario y mostrar la edad calculada.
 '''
 #1
 def saludar(nombre)
-    print()
+    saludo = "hola, ",nombre ", cómo estás?"
+    return print(saludo)
+
+nombre=input("Introduzca su nombre: " )
+Saludar(nombre)
+
+#2
+def operaciones(num1, num2)
+    Suma = num1+num2
+    Resta = num1-num2
+    Multi = num1*num2
+    return print("el resultado de la suma es ", Suma)
+    print("el resultado de la resta es ", Resta)
+    print("el resultado de la multiplicación es ", Multi)
+
+num1 = input( "ingresé el primer número: ")
+num2 = input( "ingresé el segundo número: ")
+saludar(num1, num2)
