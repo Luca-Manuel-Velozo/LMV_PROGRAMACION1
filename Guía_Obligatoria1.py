@@ -39,5 +39,54 @@ def operaciones(num1, num2)
     print("el resultado de la multiplicación es ", Multi)
 
 num1 = input( "ingresé el primer número: ")
-num2 = input( "ingresé el segundo número: ")
+num2 = input( "ingresé  el segundo número: ")
 saludar(num1, num2)
+
+#3
+def area_triangulo(base,altura)
+    area = (base * altura)/2
+    return area
+
+print ("Calculadora de Área de un triángulo")
+base = input("Ingrese la longitud de la base del triángulo(cm): ")
+altura = input("Ingrese la altura del triángulo(cm):")
+print("el área del triángulo es:")
+area_triangulo(base,altura)
+
+#4
+def buscar_mayor(a,b,c)
+    if b<a>c
+        1ero=a
+        if b>c
+            2do=b
+            3ro=c
+        else
+            2do=c
+            3ro=b
+    elif a<b>c
+        1ero=b
+        if a>c
+            2do=a
+            3ro=c
+        else
+            2do=c
+            3ro=a
+    else 
+        1ero=c
+        if a>b
+            2do=a
+            3ro=b
+        else
+            2do=b
+            3ro=a
+    return(1ero,2do,3ro)
+    
+print("ingrese tres números para ser ordenados de mayor a menor")
+num1=input(int("primer número: "))
+num2=input(int("segundo número: "))
+num3=input(int("tercer número: "))
+
+print("ordenados quedan:")
+buscar_mayor(num1,num2,num3)
+
+        
