@@ -44,7 +44,6 @@ for eleccion in atracc:
             if carrusel==False:
                 print("No puede acceder a ésta atracción")
             else:
-                total =+1500
     if eleccion == "Casa del Terror":
         print("subis a la Casa del Terror?")
         subeCT=str(input("SI/NO(usar mayúsculas):"))
