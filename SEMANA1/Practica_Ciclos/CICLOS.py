@@ -32,6 +32,38 @@ else:
     carrusel = True
     casa_terror = False
     mrusa = False
-    
-    
+atracc=["Carrusel","Casa del Terror","Montaña Rusa"]
+total=0
+for eleccion in atracc:
+    print(f"{eleccion}")
+    if eleccion == "Carrusel":
+        print("subis al Carrusel?")
+        subeC=str(input("SI/NO(usar mayúsculas):"))
+        if subeC=="SI":
+            subeC=True
+            if carrusel==False:
+                print("No puede acceder a ésta atracción")
+            else:
+                total =+1500
+    if eleccion == "Casa del Terror":
+        print("subis a la Casa del Terror?")
+        subeCT=str(input("SI/NO(usar mayúsculas):"))
+        if subeCT=="SI":
+            subeCT=True
+            if casa_terror==False:
+                print("No puede acceder a ésta atracción")
+            else:
+                total =+2000       
+    if eleccion == "Montaña Rusa":
+        print("subis a la Montaña Rusa?")
+        subeMR=str(input("SI/NO(usar mayúsculas):"))
+        if subeMR=="SI":
+            subeMR=True
+            if mrusa==False:
+                print("No puede acceder a ésta atracción")
+            else:
+                total =+3000   
+usadas={subeMR,subeC,subeCT}
+
+print(total)    
 
