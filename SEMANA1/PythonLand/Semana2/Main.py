@@ -1,20 +1,20 @@
-import Parque
+import Gestion_Parque.Parque as GP
+
 
 print("¡¡Bienvenido a PythonLand!!")
 nombre=str(input("\nIngrese su nombre: "))
 edad=int(input("Ingrese su Edad: "))
 atracciones=int(input("cuántas atracciones desea usar?(Máximo 3): "))
 
-carrusel = Parque.puede_subir(edad,"carrusel")
-mrusa = Parque.puede_subir(edad,"mrusa")
-casa_terror = Parque.puede_subir(edad,"casa_terror")
+carrusel = GP.puede_subir(edad,"carrusel")
+mrusa = GP.puede_subir(edad,"mrusa")
+casa_terror = GP.puede_subir(edad,"casa_terror")
 
 
-atracc=["Carrusel","Casa del Terror","Montaña Rusa"]
 total=0
 subtotal=0
 elegidas=0
-for eleccion in atracc:
+for eleccion in range(atracciones):
     print(f"{eleccion}")
     match eleccion:
 
