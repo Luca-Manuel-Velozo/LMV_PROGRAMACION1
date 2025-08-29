@@ -16,7 +16,7 @@ $1200, Carrusel = $800).
 usar y el costo total a pagar.'''
 
 print("¡¡Bienvenido a PythonLand!!")
-nombre=str(input("Ingrese su nombre: "))
+nombre=str(input("\nIngrese su nombre: "))
 edad=int(input("Ingrese su Edad: "))
 atracciones=int(input("cuántas atracciones desea usar?(Máximo 3): "))
 
@@ -34,35 +34,64 @@ else:
     mrusa = False
 atracc=["Carrusel","Casa del Terror","Montaña Rusa"]
 total=0
+elegidas=0
 for eleccion in atracc:
     print(f"{eleccion}")
-    if eleccion == "Carrusel":
-        print("subis al Carrusel?")
-        subeC=str(input("SI/NO(usar mayúsculas):"))
-        if subeC=="SI":
-            subeC=True
-            if carrusel==False:
-                print("No puede acceder a ésta atracción")
-            else:
-    if eleccion == "Casa del Terror":
-        print("subis a la Casa del Terror?")
-        subeCT=str(input("SI/NO(usar mayúsculas):"))
-        if subeCT=="SI":
-            subeCT=True
-            if casa_terror==False:
-                print("No puede acceder a ésta atracción")
-            else:
-                total =+2000       
-    if eleccion == "Montaña Rusa":
-        print("subis a la Montaña Rusa?")
-        subeMR=str(input("SI/NO(usar mayúsculas):"))
-        if subeMR=="SI":
-            subeMR=True
-            if mrusa==False:
-                print("No puede acceder a ésta atracción")
-            else:
-                total =+3000   
-usadas={subeMR,subeC,subeCT}
+    match eleccion:
 
-print(total)    
+        case "Carrusel":
+            print("\nsubis al Carrusel?")
+            subeC=str(input("SI/NO(usar mayúsculas):"))
+            if subeC=="SI":
+                if elegidas<atracciones:
+                    subeC=True
+                    if carrusel==False:
+                        print("\nNo puede acceder a ésta atracción")
+                    else:
+                        total = total+1500
+                        elegidas=elegidas+1
+                else:
+                    print("no podes elegir más atracciones")
+        case "Casa del Terror":
+            print("\nsubis a la Casa del Terror?")
+            subeCT=str(input("SI/NO(usar mayúsculas):"))
+            if subeCT=="SI":
+                if elegidas<atracciones:
+                    subeCT=True
+                    if casa_terror==False:
+                        print("\nNo puede acceder a ésta atracción")
+                    else:
+                        total = total+2000
+                        elegidas=elegidas+1
+                else:
+                    print("no podes elegir más atracciones")
+        case "Montaña Rusa":
+            print("\nsubis a la Montaña Rusa?")
+            subeMR=str(input("SI/NO(usar mayúsculas):"))
+            if subeMR=="SI":
+                if elegidas<atracciones:
+                    subeMR=True
+                    if mrusa==False:
+                        print("\nNo puede acceder a ésta atracción")
+                    else:
+                        total = total+3000
+                        elegidas=elegidas+1   
+                else:
+                    print("no podes elegir más atracciones")
 
+
+print("\nRegistro de Visitante")
+print(f"\nNombre:{nombre}")
+if subeC == True:
+    print("Carrusel elegido")
+    if carrusel==True:
+        print("     Pudo subir")
+if subeCT == True:
+    print("Casa del Terror elegida")
+    if casa_terror==True:
+        print("     Pudo subir")  
+if subeMR == True:
+    print("Montaña Rusa elegida")
+    if mrusa==True:
+        print("     Pudo subir")
+print(f"El precio final es ${total}") 
