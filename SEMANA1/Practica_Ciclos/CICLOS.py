@@ -18,3 +18,20 @@ usar y el costo total a pagar.'''
 print("¡¡Bienvenido a PythonLand!!")
 nombre=str(input("Ingrese su nombre: "))
 edad=int(input("Ingrese su Edad: "))
+atracciones=int(input("cuántas atracciones desea usar?(Máximo 3): "))
+
+if edad>=12:
+    carrusel = True
+    casa_terror = True
+    mrusa = True
+elif edad>=6:
+    carrusel = True
+    casa_terror = True
+    mrusa = False
+else:
+    carrusel = True
+    casa_terror = False
+    mrusa = False
+    
+    
+
