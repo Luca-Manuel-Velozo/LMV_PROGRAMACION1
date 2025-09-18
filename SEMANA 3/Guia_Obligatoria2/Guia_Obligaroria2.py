@@ -144,8 +144,81 @@ Num_mayor = Num_ent[0]
 for i in range(len(Num_ent)):
     if Num_ent[i]> Num_mayor:
         Num_mayor = Num_ent[i]
+        posicion = (i)
 
-print(f"El número mayor es: {Num_mayor} y se encuentra en {i}")
+'''7. Invertir orden:
+Cargar un array de 6 enteros y mostrarlo invertido, es decir, desde el último al primero.'''
+
+Num_ent=[0]*6 
+Num_ent[0]=1
+Num_ent[1]=2
+Num_ent[2]=3
+Num_ent[3]=4
+Num_ent[4]=5
+Num_ent[5]=6
+
+for i in range(len(Num_ent)):
+    print(Num_ent[-i-1])
+
+print(f"El número mayor es: {Num_mayor} y se encuentra en la posición {posicion}")
+
+'''8. Comparar dos arrays:
+Cargar dos arrays de 5 elementos cada uno. Comparar si ambos son iguales elemento a elemento
+y mostrar un mensaje indicando si son o no iguales.'''
+
+Num_uno=[0]*5
+Num_uno[0]=1
+Num_uno[1]=2
+Num_uno[2]=3
+Num_uno[3]=4
+Num_uno[4]=5
+
+Num_dos=[0]*5
+Num_dos[0]=4
+Num_dos[1]=2
+Num_dos[2]=3
+Num_dos[3]=4
+Num_dos[4]=5
+
+for i in range(5):
+    if Num_uno[i] == Num_dos[i]:
+        print("los Arrays son identicos")
+    else:
+        print("hay disidencias")
+        break
+
+'''9. Intercambiar elementos pares por ceros:
+Cargar un array de 10 enteros. Reemplazar todos los elementos pares por cero y mostrar el array
+resultante.'''
+
+Num_ent=[0]*10
+Num_ent[0]=1
+Num_ent[1]=2
+Num_ent[2]=3
+Num_ent[3]=4
+Num_ent[4]=5
+Num_ent[5]=6
+Num_ent[6]=7
+Num_ent[7]=8
+Num_ent[8]=9
+Num_ent[9]=10
+
+for i in range(len(Num_ent)):
+    if (Num_ent[i]%2) == 0:
+        Num_ent[i] = 0
+    print(Num_ent[i])
+
+'''10. Función para buscar la primera aparición de un valor:
+Escribir una función que reciba un array de enteros y un número a buscar. La función debe retornar
+la posición de la primera aparición de ese número o -1 si no se encuentra.'''
 
 
-
+def primera_aparición(array, numero):
+    posicion = 0 
+    for i in range(len(array)):
+        if array[i] == numero:
+            posicion = i
+            break
+        else:
+            posicion = -1
+    return posicion
