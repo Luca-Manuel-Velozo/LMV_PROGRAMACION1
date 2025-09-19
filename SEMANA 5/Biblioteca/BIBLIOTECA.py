@@ -39,7 +39,7 @@ titulos = [""] * MAX_LIBROS
 ejemplares = [0] * MAX_LIBROS
 
 while True:
-    print("=== Menú Biblioteca ===")
+    print("\n=== Menú Biblioteca ===\n")
     print("1. Cargar títulos y ejemplares")
     print("2. Mostrar catálogo completo")
     print("3. Consultar disponibilidad")
