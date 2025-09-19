@@ -3,18 +3,12 @@ Cargar dos arrays de 5 elementos cada uno. Comparar si ambos son iguales element
 y mostrar un mensaje indicando si son o no iguales.'''
 
 Num_uno=[0]*5
-Num_uno[0]=1
-Num_uno[1]=2
-Num_uno[2]=3
-Num_uno[3]=4
-Num_uno[4]=5
+for i in range(len(Num_uno)):
+    Num_uno[i] = int(input(f"ingrese el número en la posición {i+1}:"))
 
 Num_dos=[0]*5
-Num_dos[0]=1
-Num_dos[1]=2
-Num_dos[2]=3
-Num_dos[3]=4
-Num_dos[4]=5
+for i in range(len(Num_dos)):
+    Num_dos[i] = int(input(f"ingrese el número en la posición {i+1}:"))
 
 igualdad = 0
 for i in range(5):
