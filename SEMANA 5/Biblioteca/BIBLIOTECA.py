@@ -31,35 +31,42 @@ Puntos clave:
 ● Manejar correctamente los índices para mantener sincronizados títulos y ejemplares.
 ● Evitar sobrepasar el límite de 20 elementos.
 ● Modularizar usando funciones para cada opción del menú.'''
+
+import Biblioteca.funciones as Fc
+
 MAX_LIBROS = 20
 titulos = [""] * MAX_LIBROS
 ejemplares = [0] * MAX_LIBROS
 
-def menu():
-    while True:
-        print("=== Menú Biblioteca ===")
-        print("1. Cargar títulos y ejemplares")
-        print("2. Mostrar catálogo completo")
-        print("3. Consultar disponibilidad")
-        print("4. Listar títulos agotados")
-        print("5. Agregar un nuevo título")
-        print("6. Actualizar ejemplares (préstamo / devolución)")
-        print("7. Salir")
-        opcion = input("Seleccione una opción: ").strip()
-        if opcion == "1":
-            cargar_titulos(titulos, ejemplares)
-        elif opcion == "2":
-            mostrar_catalogo(titulos, ejemplares)
-        elif opcion == "3":
-            consultar_disponibilidad(titulos, ejemplares)
-        elif opcion == "4":
-            listar_agotados(titulos, ejemplares)
-        elif opcion == "5":
-            agregar_titulo(titulos, ejemplares)
-        elif opcion == "6":
-            actualizar_ejemplares(titulos, ejemplares)
-        elif opcion == "7":
-            print("Nos vemos!")
-            break
-        else:
-            print("Opción no válida. Intente de nuevo.\n")
+while True:
+    print("=== Menú Biblioteca ===")
+    print("1. Cargar títulos y ejemplares")
+    print("2. Mostrar catálogo completo")
+    print("3. Consultar disponibilidad")
+    print("4. Listar títulos agotados")
+    print("5. Agregar un nuevo título")
+    print("6. Actualizar ejemplares (préstamo / devolución)")
+    print("7. Salir")
+    opcion = input("Seleccione una opción: ")
+    if opcion == "1":
+        Fc.cargar_titulos(titulos, ejemplares)
+    elif opcion == "2":
+        Fc.mostrar_catalogo(titulos, ejemplares)
+    elif opcion == "3":
+        Fc.consultar_disponibilidad(titulos, ejemplares)
+    elif opcion == "4":
+        Fc.listar_agotados(titulos, ejemplares)
+    elif opcion == "5":
+        Fc.agregar_titulo(titulos, ejemplares)
+    elif opcion == "6":
+        Fc.actualizar_ejemplares(titulos, ejemplares)
+    elif opcion == "7":
+        print("Nos vemos!")
+        break
+    else:
+        print("Opción no válida. Intente de nuevo.\n")
+
+
+            
+
+
