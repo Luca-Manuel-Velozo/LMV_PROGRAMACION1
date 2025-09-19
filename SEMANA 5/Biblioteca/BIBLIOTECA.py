@@ -32,7 +32,7 @@ Puntos clave:
 ● Evitar sobrepasar el límite de 20 elementos.
 ● Modularizar usando funciones para cada opción del menú.'''
 
-import Biblioteca.funciones as Fc
+import funciones as Fc
 
 MAX_LIBROS = 20
 titulos = [""] * MAX_LIBROS
@@ -49,17 +49,17 @@ while True:
     print("7. Salir")
     opcion = input("Seleccione una opción: ")
     if opcion == "1":
-        Fc.cargar_titulos(titulos, ejemplares)
+        Fc.cargar_titulos(titulos, ejemplares, MAX_LIBROS)
     elif opcion == "2":
-        Fc.mostrar_catalogo(titulos, ejemplares)
+        Fc.mostrar_catalogo(titulos, ejemplares, MAX_LIBROS)
     elif opcion == "3":
-        Fc.consultar_disponibilidad(titulos, ejemplares)
+        Fc.consultar_disponibilidad(titulos, ejemplares, MAX_LIBROS)
     elif opcion == "4":
-        Fc.listar_agotados(titulos, ejemplares)
+        Fc.listar_agotados(titulos, ejemplares, MAX_LIBROS)
     elif opcion == "5":
-        Fc.agregar_titulo(titulos, ejemplares)
+        Fc.agregar_titulo(titulos, ejemplares, MAX_LIBROS)
     elif opcion == "6":
-        Fc.actualizar_ejemplares(titulos, ejemplares)
+        Fc.actualizar_ejemplares(titulos, ejemplares, MAX_LIBROS)
     elif opcion == "7":
         print("Nos vemos!")
         break
