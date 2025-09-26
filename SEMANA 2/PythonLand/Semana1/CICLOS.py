@@ -18,80 +18,10 @@ usar y el costo total a pagar.'''
 print("¡¡Bienvenido a PythonLand!!")
 nombre=str(input("\nIngrese su nombre: "))
 edad=int(input("Ingrese su Edad: "))
-atracciones=int(input("cuántas atracciones desea usar?(Máximo 3): "))
+catracciones=int(input("cuántas atracciones desea usar?(Máximo 3): "))
 
-if edad>=12:
-    carrusel = True
-    casa_terror = True
-    mrusa = True
-elif edad>=6:
-    carrusel = True
-    casa_terror = True
-    mrusa = False
-else:
-    carrusel = True
-    casa_terror = False
-    mrusa = False
-atracc=["Carrusel","Casa del Terror","Montaña Rusa"]
-total=0
-elegidas=0
-for eleccion in atracc:
-    print(f"{eleccion}")
-    match eleccion:
+carrusel = True
+casaT = False
+mrusa = False
 
-        case "Carrusel":
-            print("\nsubis al Carrusel?")
-            subeC=str(input("SI/NO(usar mayúsculas):"))
-            if subeC=="SI":
-                if elegidas<atracciones:
-                    subeC=True
-                    if carrusel==False:
-                        print("\nNo puede acceder a ésta atracción")
-                    else:
-                        total = total+1500
-                        elegidas=elegidas+1
-                else:
-                    print("no podes elegir más atracciones")
-        case "Casa del Terror":
-            print("\nsubis a la Casa del Terror?")
-            subeCT=str(input("SI/NO(usar mayúsculas):"))
-            if subeCT=="SI":
-                if elegidas<atracciones:
-                    subeCT=True
-                    if casa_terror==False:
-                        print("\nNo puede acceder a ésta atracción")
-                    else:
-                        total = total+2000
-                        elegidas=elegidas+1
-                else:
-                    print("no podes elegir más atracciones")
-        case "Montaña Rusa":
-            print("\nsubis a la Montaña Rusa?")
-            subeMR=str(input("SI/NO(usar mayúsculas):"))
-            if subeMR=="SI":
-                if elegidas<atracciones:
-                    subeMR=True
-                    if mrusa==False:
-                        print("\nNo puede acceder a ésta atracción")
-                    else:
-                        total = total+3000
-                        elegidas=elegidas+1   
-                else:
-                    print("no podes elegir más atracciones")
-
-
-print("\nRegistro de Visitante")
-print(f"\nNombre:{nombre}")
-if subeC == True:
-    print("Carrusel elegido")
-    if carrusel==True:
-        print("     Pudo subir")
-if subeCT == True:
-    print("Casa del Terror elegida")
-    if casa_terror==True:
-        print("     Pudo subir")  
-if subeMR == True:
-    print("Montaña Rusa elegida")
-    if mrusa==True:
-        print("     Pudo subir")
-print(f"El precio final es ${total}") 
+if edad 
