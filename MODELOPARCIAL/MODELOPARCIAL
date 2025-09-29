@@ -2,7 +2,7 @@ MAX_PARTICIPANTES = 10
 nombre_completo = [""] * MAX_PARTICIPANTES
 puntuacion = [0] * MAX_PARTICIPANTES
 comentario = [""] * MAX_PARTICIPANTES
-puntuaciones_validas = [1,2,3,4,5,6,7,8,9,10]
+
 def cargar_participantes():
     for i in range(MAX_PARTICIPANTES):
         while True:
@@ -27,13 +27,40 @@ def cargar_participantes():
         else:
             break
 
+def mostrar_PyC():
+    promedio=0
+    participantes=0
+    for i in range(MAX_PARTICIPANTES):
+        if nombre_completo[i] == "":
+            print(f"\nEl promedio de puntuación fué : {promedio/participantes}")
+            break
+        print(f"\nParticipante {i+1}: \n")
+        print(f"Nombre: {nombre_completo[i]}")
+        print(f"Puntuación: {puntuacion[i]}")
+        print(f"Comentario: {comentario[i]}")
+        promedio += puntuacion[i]
+        participantes = i+1
+
+def ordenar():
+    n = len(puntuacion)
+    for i in range(n-1):
+        if puntuacion == "":
+            break
+        for j in range(n-1-i):
+            if puntuacion[j] != 0 and puntuacion[j+1] != 0:    
+                if puntuacion[j] > puntuacion[j+1]:
+                    puntuacion[j], puntuacion[j+1] = puntuacion[j+1], puntuacion[j]
+                    nombre_completo[j], nombre_completo[j+1] = nombre_completo[j+1], nombre_completo[j]
+                    comentario[j], comentario[j+1] = comentario[j+1], comentario[j]
+    print (puntuacion)
+
 while True:
     print("\n=== Menú Encuesta de Satisfacción ===\n")
     print("1. Cargar Participantes")
     print("2. Mostrar puntuciones y comentarios")
     print("3. Ordenanar participantes por puntuación")
     print("4. Salir")
-    opcion = input("Seleccione una opción: ")
+    opcion = input("\nSeleccione una opción: ")
     if opcion == "1":
         cargar_participantes()
     elif opcion == "2":
@@ -42,4 +69,4 @@ while True:
         ordenar()
     elif opcion == "4":
         print("Encuesta Finalizada!!... \n...Cerrando.")
-        breakS
+        break
