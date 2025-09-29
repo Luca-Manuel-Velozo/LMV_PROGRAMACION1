@@ -45,8 +45,7 @@ def ordenar():
     n = len(puntuacion)
     for i in range(n-1):
         intercambio = False
-        if puntuacion == "":
-            break
+        
         for j in range(n-1-i):
             if puntuacion[j] != 0 and puntuacion[j+1] != 0:    
                 if puntuacion[j] > puntuacion[j+1]:
@@ -54,8 +53,8 @@ def ordenar():
                     nombre_completo[j], nombre_completo[j+1] = nombre_completo[j+1], nombre_completo[j]
                     comentario[j], comentario[j+1] = comentario[j+1], comentario[j]
                     intercambio = True
-                if intercambio == False:
-                    break
+            if intercambio == False:
+                break
     print (puntuacion)
 
 while True:
