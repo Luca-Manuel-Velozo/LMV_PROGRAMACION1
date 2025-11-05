@@ -79,19 +79,3 @@ if atracciones>=3 and carrusel==True and mrusa==True and casa_terror==True:
 else:
     total = subtotal
 print(f"    Total: ${total}")
-
-def puede_subir(edad,atraccion):
-    edad = int(input("Ingrese la edad del visitante: "))
-    if edad >= 12:
-        Subemr = True
-        Subect = True
-        Subecs = True
-    elif 12 > edad >= 6:
-        Subemr = False
-        Subect = True
-        Subecs = True
-    else:
-        Subemr = False
-        Subect = False
-        Subecs = True
-
