@@ -85,7 +85,9 @@ def registrar_visita():
                 subecs = False
         else:
             print("No puede subir al Carrusel") 
-        
+        if elecciones == atracciones:
+            print("MÁXIMO DE ATRACCIONES ALCANZADO")
+            break
         if  puedect == True:
             while subect != "s" and subect != "n":
                 subect = input("Casa del Terror(s/n): ")
@@ -97,7 +99,9 @@ def registrar_visita():
                 subect = False
         else:
             print("No puede subir a la Casa del Terror")
-        
+        if elecciones == atracciones:
+            print("MÁXIMO DE ATRACCIONES ALCANZADO")
+            break
         if  puedemr == True:
             while subemr != "s" and subemr != "n":
                 subemr = input("Montaña Rusa(s/n): ")
@@ -109,10 +113,46 @@ def registrar_visita():
                 subemr = False
         else:
             print("No puede subir a la Montaña Rusa")
+        if elecciones == atracciones:
+            print("MÁXIMO DE ATRACCIONES ALCANZADO")
+            break
         exit = input("Desea salir del Menú?(s/n): ")
         if exit == "s":
             break
         else:
             pass
-    if elecciones == atracciones:
-        print("MÁXIMO DE ATRACCIONES ALCANZADO")
+    if elecciones >= 3:
+        total = subtotal - subtotal/10
+
+    return total, subtotal, subecs, subect, subemr, nombre, edad
+
+def mostrar_resumen(resumen):
+    total, subtotal, subecs, subect, subemr, nombre, edad = resumen
+    print("\n===Resumen de visita ===")
+    print(f"\nNombre: {nombre}")
+    print(f"Edad: {edad}")
+    print("\n===ATRACCIONES===\n")
+    if subecs == True:
+        print("Carrusel: SI -$1.500")
+    else:
+        print("Carrusel: Atraccion no elegida/ no disponible")
+    if subect == True:
+        print("Casa del Terror: SI -$2.000")
+    else:
+        print("Casa del Terror: Atraccion no elegida/ no disponible")
+    if subemr == True:
+        print("Montaña Rusa: SI -$3.000")
+    else:
+        print("Montaña Rusa: Atraccion no elegida/ no disponible")
+    
+    if subtotal > total:
+        descuento = subtotal - total
+        print("descuento por elección de 3 o mas atraciones\n")
+    print(f"Subtotal: ${subtotal}")
+    print(f"descuento: ${descuento}")
+    print(f"    Total: ${total}")
+    
+    
+
+
+

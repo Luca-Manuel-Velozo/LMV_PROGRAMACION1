@@ -27,10 +27,10 @@ while True:
         pp.calcular_precio(atraccion)
 
     elif opcion == "4": 
-        pp.registrar_visita()
+        resumen = pp.registrar_visita()
 
     elif opcion == "5":
-        pp.mostrar_resumen()
+        pp.mostrar_resumen(resumen)
     
     elif opcion == "6":
         print("Nos vemos!")
